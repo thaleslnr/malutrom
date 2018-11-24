@@ -3,6 +3,8 @@ os: linux
 files:
   - source: /
     destination: /var/www/html/malutrom
+    #source: codedeploy/zz_malutrom.conf
+    #destination: /etc/httpd/conf.d/
 hooks:
-  BeforeInstall:
+  ApplicationStart:
     - location: codedeploy/install.sh
